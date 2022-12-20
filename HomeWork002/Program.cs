@@ -53,7 +53,7 @@ int numb = Convert.ToInt32(Console.ReadLine());
 
 int thirdN = ThirdNumber(numb);
 
-if (thirdN > 100)
+if (thirdN > 99)
 	Console.WriteLine($"Third number is {thirdN % 10}");
 else
 	Console.WriteLine("No third number");
