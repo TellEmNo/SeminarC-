@@ -41,7 +41,7 @@ else
 */
 //Напишите программу, которая принимает на вход число (N) и выдаёт квадраты чисел от 1 до N.
 /*
-void Quad(int n)
+void Square(int n)
 {
 	int result = 0;
 	for (int i = 1; i <= n; i++)
@@ -54,7 +54,7 @@ void Quad(int n)
 Console.Write("Input a number: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-Quad(n);
+Square(n);
 */
 //Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
 

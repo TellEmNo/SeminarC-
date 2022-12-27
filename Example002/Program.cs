@@ -17,7 +17,7 @@ Console.WriteLine($"New version of number is {newNumber}");
 */
 
 /*
-boll IsEven(int num)
+bool IsEven(int num)
 {
 	if(num % 2 == 0)
 		return true;
