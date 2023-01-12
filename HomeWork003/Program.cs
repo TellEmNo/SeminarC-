@@ -60,7 +60,7 @@ Console.WriteLine($"Distance between coordinates: {result}");
 
 // Задача 23
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-
+/*
 void Cube(int n)
 {
 	double result = 0;
@@ -75,3 +75,4 @@ Console.Write("Input a number: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 Cube(n);
+*/
