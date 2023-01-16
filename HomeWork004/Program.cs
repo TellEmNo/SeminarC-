@@ -21,8 +21,8 @@ int result = Pow(A, B);
 if(result == -1)
 	Console.WriteLine(" Я возвожу только в натуральную степень");
 else
-	Console.Write($"'A' to the power of 'B' = {result}"); 
-*/
+	Console.Write($"'A' to the power of 'B' = {result}");
+	*/
 
 // Задача 2. Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 /* 
@@ -68,4 +68,4 @@ int size = Convert.ToInt32(Console.ReadLine());
 
 int[] array = CreateArray(size);
 
-ShowCreatedArray(array);
+ShowCreatedArray(array); 
