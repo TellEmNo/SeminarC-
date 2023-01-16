@@ -105,11 +105,10 @@ void ShowArray(int[] array){
 
 
 bool Yn(int[] array, int numb){
-	bool y = false;
 	for (int i = 0; i < array.Length; i++){
-		if(array[i] == numb) y = true;
+		if(array[i] == numb) return true;
 	}
-	return y;
+	return false;
 }
 
 Console.Write("Input a number: ");
