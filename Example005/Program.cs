@@ -156,19 +156,19 @@ int Line(int[] array, int a, int b){
 }
 
 
-Console.Write("Input a: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
-Console.Write("Input b: ");
-int b = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine();
-
 Console.Write("Input a number of elements: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input a min possible value: ");
 int min = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input a max possible value: ");
 int max = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+
+Console.Write("Input a: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input b: ");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
 
 int[] newArray = RandomArray(m, min, max);
 
