@@ -84,31 +84,15 @@ Console.WriteLine("Sum of odd numbers = " + result);
 // Задача 38: Задайте массив вещественных чисел.
 // Найдите разницу между максимальным и минимальным элементов массива.
 
-int[] RandomArray(int size, int minValue, int maxValue){
-	int[] array = new int [size];
+double[] RandomArray(int size, int minValue, int maxValue){
+	double[] array = new double [size];
 
 	for (int i = 0; i < size; i++)
-		array[i] = new Random().Next(minValue, maxValue);
+		array[i] = Math.Round(new Random().Next(minValue, maxValue) + new Random().NextDouble() ,2);
 	return array;
 }
 
-double[] HundredthOfNumber(int size){
-	double[] array = new double[size];
-
-	for (int i = 0; i < size; i++)
-		array[i] = new Random().NextDouble();
-	return array;
-}
-
-double[] SumOfArrays(int size, int[] arrayA, double[] arrayB){
-	double[] arrayD = new double[size];
-
-	for (int i = 0; i < arrayA.Length; i++)
-		arrayD[i] = arrayA[i] + arrayB[i];
-	return arrayD;
-}
-
-void ShowSumOfArrays(double[] array){
+void ShowArray(double[] array){
 
 	for (int i = 0; i < array.Length; i++)
 		Console.Write(Math.Round(array[i], 2)+ " ");
@@ -136,13 +120,10 @@ int min = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input a max possible value: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
-int[] newArray = RandomArray(m, min, max);
-double[] hundredth = HundredthOfNumber(m);
+double[] newArray = RandomArray(m, min, max);
 
-double[] sumOfArrays =SumOfArrays(m, newArray, hundredth);
+ShowArray(newArray);
 
-ShowSumOfArrays(sumOfArrays);
-
-double result = MaxMinusMin(sumOfArrays);
+double result = MaxMinusMin(newArray);
 
 Console.Write($"max - min = {Math.Round(result, 2)} ");
