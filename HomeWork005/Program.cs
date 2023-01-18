@@ -88,7 +88,7 @@ double[] RandomArray(int size, int minValue, int maxValue){
 	double[] array = new double [size];
 
 	for (int i = 0; i < size; i++)
-		array[i] = Math.Round(new Random().Next(minValue, maxValue) + new Random().NextDouble() ,2);
+		array[i] = new Random().Next(minValue, maxValue) + new Random().NextDouble();
 	return array;
 }
 
