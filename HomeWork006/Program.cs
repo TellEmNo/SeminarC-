@@ -24,7 +24,7 @@ void IntersectionOfLines(double k1, double b1, double k2, double b2){
 	double x = (b2 - b1) / (k1 - k2);
 	double y = k1 * x + b1;
 	if (k1 == k2) Console.WriteLine("Решений нет");
-	else Console.WriteLine($"{Math.Round(x, 2)}, {Math.Round(y, 2)}");
+	else Console.WriteLine($"Point of intersection N = {Math.Round(x, 2)}, {Math.Round(y, 2)}");
 }
 
 Console.Write("Input the b1: ");
