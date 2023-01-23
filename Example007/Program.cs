@@ -78,8 +78,16 @@ Show2dArray(secondMatrix);
 // Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали
 // (с индексами (0,0); (1; 1) и т.д.
 
-int[,] CreateMatrix(int rows, int columns, int minValue, int maxValue)
+int[,] CreateMatrix()
 {
+	Console.Write("Input a number of rows: ");
+	int rows = Convert.ToInt32(Console.ReadLine());
+	Console.Write("Input a number of columns: ");
+	int columns = Convert.ToInt32(Console.ReadLine());
+	Console.Write("Input a min possible value: ");
+	int minValue = Convert.ToInt32(Console.ReadLine());
+	Console.Write("Input a max possible value: ");
+	int maxValue = Convert.ToInt32(Console.ReadLine());
 	int[,] matrix = new int[rows, columns];
 	for (int i = 0; i < matrix.GetLength(0); i++)
 		for (int j = 0; j < matrix.GetLength(1); j++)
@@ -98,10 +106,10 @@ void Show2dArray(int[,] array)
 	Console.WriteLine();
 }
 
-int SumElements(int[,] matrix, int rows, int columns)
+int SumElements(int[,] matrix)
 {
 	int result = 0;
-	if (rows <= columns)
+	if (matrix.GetLength(0) <= matrix.GetLength(1))
 	{
 		for (int i = 0; i < matrix.GetLength(0); i++)
 			result += matrix[i, i];
@@ -115,20 +123,11 @@ int SumElements(int[,] matrix, int rows, int columns)
 	}
 }
 
-Console.Write("Input a number of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a number of columns: ");
-int columns = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a min possible value: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a max possible value: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-
-int[,] matrix = CreateMatrix(rows, columns, minValue, maxValue);
+int[,] matrix = CreateMatrix();
 
 Show2dArray(matrix);
 
-int result = SumElements(matrix, rows, columns);
+int result = SumElements(matrix);
 
 Console.WriteLine(result);
 
