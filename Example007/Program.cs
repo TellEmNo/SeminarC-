@@ -131,4 +131,4 @@ int result = SumElements(matrix);
 
 Console.WriteLine(result);
 
-// для дз Возврат int и для проверки на существование вывела бы текст что его нет
+
