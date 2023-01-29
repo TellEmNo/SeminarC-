@@ -167,22 +167,18 @@ int[,] DeleteRowAndColumn(int[,] array, int[] indexes)
 	int[,] new2dArray = new int[array.GetLength(0) - 1, array.GetLength(1) - 1];
 	for (int i = 0, n = 0; i < array.GetLength(0); i++, n++)
 	{
-		if (indexes[0] == i)
+		if (indexes[0] != i)
 		{
-			n--;
-			continue;
-		}
-		else
 			for (int j = 0, k = 0; j < array.GetLength(1); j++, k++)
 			{
-				if (indexes[1] == j)
-				{
-					k--;
-					continue;
-				}
-				else
+				if (indexes[1] != j)
 					new2dArray[n, k] = array[i, j];
+				else
+					k--;
 			}
+		}
+		else
+			n--;
 	}
 	return new2dArray;
 }
